@@ -1,17 +1,236 @@
 ---
+import MainLayout from "../layouts/MainLayout.astro";
 
+import { articles } from "../data/articles";
+
+const latestArticles = articles.slice(0, 6);
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<MainLayout
+    title="Mind Healing | Self Improvement Guides"
+    description="Explore powerful guides on self-worth, confidence, mindset, and personal growth."
+>
+    <div class="container">
+        <!-- SEARCH -->
+
+        <div class="hero-search">
+            <input
+                type="text"
+                id="homeSearch"
+                placeholder="Search articles..."
+            />
+
+            <div class="search-results" id="searchResults"></div>
+        </div>
+
+        <!-- HERO -->
+
+        <div class="hero">
+            <h1>Improve Your Mindset. Change Your Life.</h1>
+
+            <p>
+                Deep guides to help you understand yourself, build confidence,
+                and change your life.
+            </p>
+
+            <div class="hero-btn">
+                <a href="/courses/self-worth/what-is-self-worth" class="btn">
+                    Start Now →
+                </a>
+            </div>
+        </div>
+
+        <div class="line"></div>
+
+        <!-- LATEST ARTICLES -->
+
+        <h2>Latest Articles</h2>
+
+        <div class="section">
+            <div class="grid">
+                {
+                    latestArticles.map((article) => (
+                        <div class="card">
+                            <h3>{article.title}</h3>
+
+                            <p>{article.desc}</p>
+
+                            <a href={article.link}>Read →</a>
+                        </div>
+                    ))
+                }
+            </div>
+        </div>
+
+        <div class="view-all">
+            <a href="/articles"> View All Articles → </a>
+        </div>
+
+        <!-- START HERE -->
+
+        <!-- <h2>Start Here</h2>
+
+        <div class="section">
+            <div class="grid">
+
+                <div class="card">
+                    <h3>Self Worth Guide</h3>
+                    <p>Start understanding your value and rebuild your self-worth.</p>
+                    <a href="/courses/Self-Worth/what-is-self-worth.html">Start →</a>
+                </div>
+
+                <div class="card">
+                    <h3>Confidence Guide</h3>
+                    <p>Learn how to build confidence step by step.</p>
+                    <a href="/courses/confidence/1-what-is-confidence.html">Start →</a>
+                </div>
+
+                <div class="card">
+                    <h3>Mindset Guide</h3>
+                    <p>Change how you think and improve your life.</p>
+                    <a href="/courses/mindset/1-what-is-mindset.html">Start →</a>
+                </div>
+
+            </div>
+        </div> -->
+
+        <!-- TOPICS -->
+
+        <h2>Explore Topics</h2>
+
+           <div class="section">
+            <div class="grid">
+
+                <!-- Self Worth -->
+                <div class="card">
+                    <h3>Self Worth</h3>
+                    <p>Understand your value, break limiting beliefs, and build a stronger self-image.</p>
+                    <a href="/courses/Self-Worth/what-is-self-worth.html">Explore →</a>
+                </div>
+
+                <!-- Confidence -->
+                <div class="card">
+                    <h3>Confidence</h3>
+                    <p>Learn how to build confidence and stop overthinking.</p>
+                    <a href="/courses/confidence/1-what-is-confidence.html">Explore →</a>
+                </div>
+
+                <!-- Mindset -->
+                <div class="card">
+                    <h3>Mindset</h3>
+                    <p>Shift your mindset and start thinking in a powerful way.</p>
+                    <a href="/courses/mindset/1-what-is-mindset.html">Explore →</a>
+                </div>
+
+                <!-- Affirmations -->
+                <div class="card">
+                    <h3>Affirmations</h3>
+                    <p>Use affirmations to reprogram your thinking and attract better results.</p>
+                    <a href="/courses/affirmations/what-are-affirmations.html">Explore →</a>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="line"></div>
+
+        <!-- ABOUT -->
+
+        <h2>About This Site</h2>
+
+        <p>
+            This website provides simple and practical guides to help you
+            improve your life step by step.
+        </p>
+
+        <p>
+            All content is designed to be easy to understand and apply in your
+            daily routine.
+        </p>
+
+        <div class="line"></div>
+
+        <!-- CTA -->
+
+        <h2>Start Your Journey</h2>
+
+        <p>
+            Choose a topic and begin your journey toward a better mindset and
+            stronger self-worth.
+        </p>
+    </div>
+
+    <script define:vars={{ articles }}>
+        const homeSearch = document.getElementById("homeSearch");
+
+        const searchResults = document.getElementById("searchResults");
+
+        homeSearch.addEventListener("input", () => {
+            const value = homeSearch.value.toLowerCase().trim();
+
+            if (value === "") {
+                searchResults.style.display = "none";
+
+                return;
+            }
+
+            const filtered = articles
+                .filter((article) => {
+                    return (
+                        article.title.toLowerCase().includes(value) ||
+                        article.desc.toLowerCase().includes(value)
+                    );
+                })
+                .slice(0, 5);
+
+            if (filtered.length === 0) {
+                searchResults.innerHTML = `
+
+                <div class="search-item">
+
+                    <p>
+                        No articles found.
+                    </p>
+
+                </div>
+
+            `;
+
+                searchResults.style.display = "block";
+
+                return;
+            }
+
+            searchResults.innerHTML = filtered
+                .map(
+                    (article) => `
+
+                <a
+                    href="${article.link}"
+                    class="search-item"
+                >
+
+                    <h4>
+                        ${article.title}
+                    </h4>
+
+                    <p>
+                        ${article.desc}
+                    </p>
+
+                </a>
+
+            `,
+                )
+                .join("");
+
+            searchResults.style.display = "block";
+        });
+
+        document.addEventListener("click", (e) => {
+            if (!e.target.closest(".hero-search")) {
+                searchResults.style.display = "none";
+            }
+        });
+    </script>
+</MainLayout>

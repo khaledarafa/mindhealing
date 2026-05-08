@@ -1,0 +1,57 @@
+---
+// src/components/form.astro
+const { isArabic } = Astro.props;
+---
+
+<section class="feedback-box">
+  <h2>
+    {isArabic ? "اترك تعليق" : "Leave a Comment"}
+  </h2>
+
+  <p class="feedback-text">
+    {
+      isArabic
+        ? "عندك فكرة، سؤال، أو رأي؟ اكتبه هنا 👇"
+        : "Have a thought, question, or feedback? Write it here 👇"
+    }
+  </p>
+
+  <form
+    action="https://formsubmit.co/moncellence@gmail.com"
+    method="POST"
+    class="contact-form"
+  >
+    <input
+      type="text"
+      name="name"
+      placeholder={isArabic ? "اسمك" : "Your Name"}
+      required
+    />
+
+    <input
+      type="email"
+      name="email"
+      placeholder={isArabic ? "بريدك الإلكتروني" : "Your Email"}
+      required
+    />
+
+    <textarea
+      name="message"
+      placeholder={isArabic ? "اكتب رسالتك..." : "Write your message..."}
+      required></textarea>
+
+    <button type="submit">
+      {isArabic ? "إرسال" : "Send Message"}
+    </button>
+
+    <input type="hidden" name="_captcha" value="false" />
+
+    <input
+      type="hidden"
+      name="_subject"
+      value={isArabic
+        ? "رسالة جديدة من Mind Healing"
+        : "New Message from Mind Healing"}
+    />
+  </form>
+</section>

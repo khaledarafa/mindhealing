@@ -1,0 +1,37 @@
+---
+// src/components/CourseBox.astro
+
+import { courseBoxes }
+from "../data/courseBoxes";
+
+const {
+    type,
+    isArabic = false
+} = Astro.props;
+
+const lang =
+    isArabic ? "ar" : "en";
+
+const box =
+    courseBoxes[
+        type as keyof typeof courseBoxes
+    ][lang];
+---
+
+<div class="course-box">
+
+    <h3>
+        {box.title}
+    </h3>
+
+    <p>
+        {box.desc}
+    </p>
+
+    <a href={box.link} class="btn">
+
+        {box.button}
+
+    </a>
+
+</div>

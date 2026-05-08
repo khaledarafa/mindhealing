@@ -1,0 +1,294 @@
+---
+// src/pages/ar/articles/index.astro
+
+import MainLayout from "../../../layouts/MainLayout.astro";
+
+import { articles } from "../../../data/articles";
+
+const arabicArticles =
+  articles.filter(
+    article => article.lang === "ar"
+  );
+---
+
+<MainLayout
+    title="جميع المقالات | Mind Healing"
+    description="اكتشف مقالات تطوير الذات، التوكيدات، الثقة بالنفس، والعقلية الإيجابية."
+>
+    <div class="container">
+
+        <!-- SEARCH -->
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="ابحث عن مقال..."
+            />
+
+            <button id="clearSearch">
+                ✕
+            </button>
+
+        </div>
+
+        <!-- HERO -->
+
+        <div class="page-hero">
+
+            <h1>
+                📚 جميع المقالات
+            </h1>
+
+            <p class="page-desc">
+                اكتشف مقالات عن تطوير الذات،
+                التوكيدات،
+                الثقة بالنفس،
+                السلام الداخلي،
+                والعقلية الإيجابية.
+            </p>
+
+            <div class="top-categories">
+
+                <a href="/ar/articles/affirmations">
+                    ✨ التوكيدات
+                </a>
+
+                <a href="/ar/articles/confidence">
+                    💪 الثقة بالنفس
+                </a>
+
+                <a href="/ar/articles/mindset">
+                    🧠 العقلية
+                </a>
+
+                <a href="/ar/articles/self-worth">
+                    ❤️ تقدير الذات
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- ARTICLES -->
+
+        <h2>
+            جميع المقالات
+        </h2>
+
+        <div class="section">
+
+            <div class="grid" id="articles"></div>
+
+        </div>
+
+        <!-- PAGINATION -->
+
+        <div class="pagination" id="pagination"></div>
+
+    </div>
+
+    <script define:vars={{ articles: arabicArticles }}>
+
+        const container =
+            document.getElementById("articles");
+
+        const pagination =
+            document.getElementById("pagination");
+
+        const searchInput =
+            document.getElementById("searchInput");
+
+        const clearBtn =
+            document.getElementById("clearSearch");
+
+        const perPage = 9;
+
+        const params =
+            new URLSearchParams(window.location.search);
+
+        let currentPage =
+            parseInt(params.get("page")) || 1;
+
+        let searchValue =
+            params.get("search") || "";
+
+        searchInput.value = searchValue;
+
+        if (searchValue) {
+
+            clearBtn.style.display = "block";
+
+        }
+
+        function getFilteredArticles() {
+
+            if (!searchValue.trim()) return articles;
+
+            return articles.filter((article) => {
+
+                return (
+
+                    article.title
+                        .toLowerCase()
+                        .includes(searchValue.toLowerCase())
+
+                    ||
+
+                    article.desc
+                        .toLowerCase()
+                        .includes(searchValue.toLowerCase())
+
+                );
+
+            });
+
+        }
+
+        function renderArticles() {
+
+            const filteredArticles =
+                getFilteredArticles();
+
+            const start =
+                (currentPage - 1) * perPage;
+
+            const end =
+                start + perPage;
+
+            const paginatedArticles =
+                filteredArticles.slice(start, end);
+
+            container.innerHTML =
+                paginatedArticles.map(article => `
+
+                    <div class="card">
+
+                        <h3>
+                            ${article.title}
+                        </h3>
+
+                        <p>
+                            ${article.desc}
+                        </p>
+
+                        <a href="${article.link}">
+
+                            اقرأ المقال ←
+
+                        </a>
+
+                    </div>
+
+                `).join("");
+
+            renderPagination(filteredArticles.length);
+
+        }
+
+        function renderPagination(totalItems) {
+
+            const totalPages =
+                Math.ceil(totalItems / perPage);
+
+            if (searchValue) {
+
+                pagination.style.display = "none";
+
+                return;
+
+            }
+
+            pagination.style.display = "flex";
+
+            let buttons = "";
+
+            if (currentPage > 1) {
+
+                buttons += `
+
+                    <a
+                        href="?page=${currentPage - 1}"
+                        class="btn"
+                    >
+
+                        السابق →
+
+                    </a>
+
+                `;
+
+            }
+
+            for (let i = 1; i <= totalPages; i++) {
+
+                buttons += `
+
+                    <a
+                        href="?page=${i}"
+                        class="btn ${i === currentPage ? "active-page" : ""}"
+                    >
+
+                        ${i}
+
+                    </a>
+
+                `;
+
+            }
+
+            if (currentPage < totalPages) {
+
+                buttons += `
+
+                    <a
+                        href="?page=${currentPage + 1}"
+                        class="btn"
+                    >
+
+                        ← التالي
+
+                    </a>
+
+                `;
+
+            }
+
+            pagination.innerHTML = buttons;
+
+        }
+
+        renderArticles();
+
+        searchInput.addEventListener("input", () => {
+
+            searchValue =
+                searchInput.value.trim();
+
+            currentPage = 1;
+
+            clearBtn.style.display =
+                searchValue ? "block" : "none";
+
+            renderArticles();
+
+        });
+
+        clearBtn.addEventListener("click", () => {
+
+            searchInput.value = "";
+
+            searchValue = "";
+
+            clearBtn.style.display = "none";
+
+            renderArticles();
+
+            searchInput.focus();
+
+        });
+
+    </script>
+
+</MainLayout>

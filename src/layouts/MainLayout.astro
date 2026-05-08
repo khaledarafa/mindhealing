@@ -1,0 +1,67 @@
+---
+import "../styles/style.css";
+import Analytics from "../components/analytics.html";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import Form from "../components/form.astro";
+
+import { SITE_TITLE, SITE_DESCRIPTION, SITE_IMAGE } from "../consts/seo";
+const pathname = Astro.url.pathname;
+
+const isArabic =
+    pathname === "/ar"
+    || pathname.startsWith("/ar/");
+
+const frontmatter = Astro.props.frontmatter || {};
+
+const {
+  title = frontmatter.title || SITE_TITLE,
+  description = frontmatter.description || SITE_DESCRIPTION,
+  image = frontmatter.image || SITE_IMAGE,
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang={isArabic ? "ar" : "en"} dir={isArabic ? "rtl" : "ltr"}>
+    <head>
+        <meta charset="UTF-8" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600;700&family=Cairo:wght@300;400;500;600;700&family=Changa:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <title>{title}</title>
+        <meta name="description" content={description} />
+
+        <meta property="og:title" content={title} />
+
+        <meta property="og:description" content={description} />
+
+        <meta property="og:image" content={image} />
+
+        <meta property="og:type" content="website" />
+
+        <link
+            rel="canonical"
+            href={`https://mindhealing.fyi${Astro.url.pathname}`}
+        />
+
+        <link rel="icon" href="/favicon.png" />
+        
+        <Analytics />
+    </head>
+
+    <body>
+        <Navbar isArabic={isArabic} />
+
+<div class="container">
+    <slot />
+</div>
+        <div class="container">
+            <Form isArabic={isArabic} />
+        </div>
+
+        <Footer />
+    </body>
+</html>

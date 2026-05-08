@@ -1,0 +1,103 @@
+---
+import MainLayout from "../../../../layouts/MainLayout.astro";
+import { articles } from "../../../../data/articles";
+
+const confidenceArticles = articles.filter(
+  (article) => article.lang === "ar" && article.link.includes("/confidence/"),
+);
+---
+
+<MainLayout
+  title="الثقة بالنفس وتقدير الذات | Mind Healing"
+  description="اكتشف مقالات عن الثقة بالنفس وتقدير الذات والتخلص من التفكير الزائد والخوف من رأي الناس وبناء شخصية أقوى وأكثر هدوءًا."
+>
+  <div class="container">
+    <div class="category-hero">
+      <h1>💪 الثقة بالنفس وتقدير الذات</h1>
+
+      <p class="page-desc">
+        اكتشف مقالات تساعدك على بناء الثقة بالنفس، رفع تقدير الذات، التخلص من
+        الخوف والتفكير الزائد، وتقوية شخصيتك لتعيش براحة وثقة أكبر.
+      </p>
+    </div>
+
+    <div class="search-box">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="ابحث داخل مقالات العقلية..."
+      />
+
+      <button id="clearSearch"> ✕ </button>
+    </div>
+
+    <div class="section">
+      <div class="grid" id="articles">
+        {
+          confidenceArticles.map((article) => (
+            <div class="card">
+              <h3>{article.title}</h3>
+
+              <p>{article.desc}</p>
+
+              <a href={article.link}>اقرأ المقال →</a>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+
+  <script define:vars={{ confidenceArticles }}>
+    const container = document.getElementById("articles");
+
+    const searchInput = document.getElementById("searchInput");
+
+    const clearBtn = document.getElementById("clearSearch");
+
+    function renderArticles(filtered = confidenceArticles) {
+      container.innerHTML = filtered
+        .map(
+          (article) => `
+
+      <div class="card">
+
+        <h3>${article.title}</h3>
+
+        <p>${article.desc}</p>
+
+        <a href="${article.link}">
+          اقرأ المقال →
+        </a>
+
+      </div>
+
+    `,
+        )
+        .join("");
+    }
+
+    searchInput.addEventListener("input", () => {
+      const value = searchInput.value.toLowerCase();
+
+      clearBtn.style.display = value ? "block" : "none";
+
+      const filtered = confidenceArticles.filter((article) => {
+        return (
+          article.title.toLowerCase().includes(value) ||
+          article.desc.toLowerCase().includes(value)
+        );
+      });
+
+      renderArticles(filtered);
+    });
+
+    clearBtn.addEventListener("click", () => {
+      searchInput.value = "";
+
+      clearBtn.style.display = "none";
+
+      renderArticles();
+    });
+  </script>
+</MainLayout>

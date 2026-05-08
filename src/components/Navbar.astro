@@ -1,0 +1,43 @@
+---
+// src/components/Navbar.astro
+const { isArabic } = Astro.props;
+---
+
+<nav class="main-nav">
+
+    <div class="nav-inner">
+
+        <a
+            href={isArabic ? "/ar/" : "/"}
+            class="logo"
+        >
+            Mind Healing
+        </a>
+
+        <div class="nav-links">
+
+            <a href={isArabic ? "/ar/" : "/"}>
+                {isArabic ? "الرئيسية" : "Home"}
+            </a>
+
+            <div class="lang-switch">
+
+                <a
+                    href={
+                        isArabic
+                        ? Astro.url.pathname.replace(/^\/ar/, "") || "/"
+                        : "/ar" + Astro.url.pathname
+                    }
+                >
+
+                    {isArabic ? "EN" : "عربي"}
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</nav>

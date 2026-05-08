@@ -1,0 +1,141 @@
+---
+import MainLayout from "../../../layouts/MainLayout.astro";
+import { articles } from "../../../data/articles";
+
+const selfWorthArticles = articles.filter(article =>
+  article.link.includes("/selfworth/")
+);
+---
+
+<MainLayout
+  title="Self Worth Articles | Mind Growth"
+  description="Explore self worth articles about confidence, self respect, emotional healing, insecurity, and inner peace."
+>
+
+<div class="container">
+
+  <div class="category-hero">
+
+    <h1>
+      ✨ Self Worth & Inner Confidence
+    </h1>
+
+    <p class="page-desc">
+      Explore articles about self worth,
+      confidence,
+      emotional healing,
+      insecurity,
+      self respect,
+      and inner peace.
+    </p>
+
+  </div>
+
+  <div class="search-box">
+
+    <input
+      type="text"
+      id="searchInput"
+      placeholder="Search self worth articles..."
+    />
+
+    <button id="clearSearch">
+      ✕
+    </button>
+
+  </div>
+
+  <div class="section">
+
+    <div class="grid" id="articles">
+
+      {
+        selfWorthArticles.map(article => (
+
+          <div class="card">
+
+            <h3>{article.title}</h3>
+
+            <p>{article.desc}</p>
+
+            <a href={article.link}>
+              Read More →
+            </a>
+
+          </div>
+
+        ))
+      }
+
+    </div>
+
+  </div>
+
+</div>
+
+<script define:vars={{ selfWorthArticles }}>
+
+const container = document.getElementById("articles");
+
+const searchInput = document.getElementById("searchInput");
+
+const clearBtn = document.getElementById("clearSearch");
+
+function renderArticles(filtered = selfWorthArticles) {
+
+  container.innerHTML = filtered.map(article => `
+
+    <div class="card">
+
+      <h3>${article.title}</h3>
+
+      <p>${article.desc}</p>
+
+      <a href="${article.link}">
+        Read More →
+      </a>
+
+    </div>
+
+  `).join("");
+
+}
+
+searchInput.addEventListener("input", () => {
+
+  const value = searchInput.value.toLowerCase();
+
+  clearBtn.style.display =
+    value ? "block" : "none";
+
+  const filtered = selfWorthArticles.filter(article => {
+
+    return (
+
+      article.title.toLowerCase().includes(value)
+
+      ||
+
+      article.desc.toLowerCase().includes(value)
+
+    );
+
+  });
+
+  renderArticles(filtered);
+
+});
+
+clearBtn.addEventListener("click", () => {
+
+  searchInput.value = "";
+
+  clearBtn.style.display = "none";
+
+  renderArticles();
+
+});
+
+</script>
+
+</MainLayout>

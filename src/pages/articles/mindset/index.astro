@@ -1,0 +1,141 @@
+---
+import MainLayout from "../../../layouts/MainLayout.astro";
+import { articles } from "../../../data/articles";
+
+const mindsetArticles = articles.filter(article =>
+  article.link.includes("/mindset/")
+);
+---
+
+<MainLayout
+  title="Mindset Articles | Mind Growth"
+  description="Explore mindset articles about positive thinking, habits, motivation, discipline, and personal growth."
+>
+
+<div class="container">
+
+  <div class="category-hero">
+
+    <h1>
+      🧠 Mindset & Personal Growth
+    </h1>
+
+    <p class="page-desc">
+      Explore articles about mindset,
+      positive thinking,
+      habits,
+      motivation,
+      discipline,
+      and personal growth.
+    </p>
+
+  </div>
+
+  <div class="search-box">
+
+    <input
+      type="text"
+      id="searchInput"
+      placeholder="Search mindset articles..."
+    />
+
+    <button id="clearSearch">
+      ✕
+    </button>
+
+  </div>
+
+  <div class="section">
+
+    <div class="grid" id="articles">
+
+      {
+        mindsetArticles.map(article => (
+
+          <div class="card">
+
+            <h3>{article.title}</h3>
+
+            <p>{article.desc}</p>
+
+            <a href={article.link}>
+              Read More →
+            </a>
+
+          </div>
+
+        ))
+      }
+
+    </div>
+
+  </div>
+
+</div>
+
+<script define:vars={{ mindsetArticles }}>
+
+const container = document.getElementById("articles");
+
+const searchInput = document.getElementById("searchInput");
+
+const clearBtn = document.getElementById("clearSearch");
+
+function renderArticles(filtered = mindsetArticles) {
+
+  container.innerHTML = filtered.map(article => `
+
+    <div class="card">
+
+      <h3>${article.title}</h3>
+
+      <p>${article.desc}</p>
+
+      <a href="${article.link}">
+        Read More →
+      </a>
+
+    </div>
+
+  `).join("");
+
+}
+
+searchInput.addEventListener("input", () => {
+
+  const value = searchInput.value.toLowerCase();
+
+  clearBtn.style.display =
+    value ? "block" : "none";
+
+  const filtered = mindsetArticles.filter(article => {
+
+    return (
+
+      article.title.toLowerCase().includes(value)
+
+      ||
+
+      article.desc.toLowerCase().includes(value)
+
+    );
+
+  });
+
+  renderArticles(filtered);
+
+});
+
+clearBtn.addEventListener("click", () => {
+
+  searchInput.value = "";
+
+  clearBtn.style.display = "none";
+
+  renderArticles();
+
+});
+
+</script>
+
+</MainLayout>

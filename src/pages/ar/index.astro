@@ -1,0 +1,243 @@
+---
+// src/pages/ar/index.astro
+import MainLayout from "../../layouts/MainLayout.astro";
+
+import { articles } from "../../data/articles";
+
+const latestArticles = articles
+    .filter((article) => article.link.startsWith("/ar/"))
+    .slice(0, 6);
+---
+
+<MainLayout
+    title="Mind Healing | تطوير الذات والثقة بالنفس"
+    description="مقالات ودروس تساعدك على تطوير الذات وبناء الثقة بالنفس وتحسين طريقة تفكيرك خطوة بخطوة."
+>
+    <div class="container">
+        <!-- البحث -->
+
+        <div class="hero-search">
+            <input
+                type="text"
+                id="homeSearch"
+                placeholder="ابحث عن المقالات..."
+            />
+
+            <div class="search-results" id="searchResults"></div>
+        </div>
+
+        <!-- HERO -->
+
+        <div class="hero">
+            <h1>طور طريقة تفكيرك وغيّر حياتك</h1>
+
+            <p>
+                مقالات ودروس تساعدك على فهم نفسك وبناء الثقة بالنفس وتحسين حياتك
+                خطوة بخطوة.
+            </p>
+
+            <div class="hero-btn">
+                <a href="/ar/courses/self-worth/what-is-self-worth" class="btn">
+                    ابدأ الآن →
+                </a>
+            </div>
+        </div>
+
+        <div class="line"></div>
+
+        <!-- المقالات -->
+
+        <h2>أحدث المقالات</h2>
+
+        <div class="section">
+            <div class="grid">
+                {
+                    latestArticles.map((article) => (
+                        <div class="card">
+                            <h3>{article.title}</h3>
+
+                            <p>{article.desc}</p>
+
+                            <a href={article.link}>اقرأ المزيد →</a>
+                        </div>
+                    ))
+                }
+            </div>
+        </div>
+
+        <div class="view-all">
+            <a href="/ar/articles"> عرض كل المقالات → </a>
+        </div>
+
+        <!-- ابدأ هنا -->
+
+        <!-- <h2>ابدأ من هنا</h2>
+
+        <div class="section">
+            <div class="grid">
+                <div class="card">
+                    <h3>دليل احترام الذات</h3>
+
+                    <p>تعلم كيف تبني احترامك لذاتك وتفهم قيمتك الحقيقية.</p>
+
+                    <a href="/ar/courses/self-worth/what-is-self-worth">
+                        ابدأ →
+                    </a>
+                </div>
+
+                <div class="card">
+                    <h3>دليل الثقة بالنفس</h3>
+
+                    <p>خطوات عملية لبناء الثقة بالنفس والتخلص من التوتر.</p>
+
+                    <a href="/ar/courses/confidence/1-what-is-confidence">
+                        ابدأ →
+                    </a>
+                </div>
+
+                <div class="card">
+                    <h3>دليل تطوير العقلية</h3>
+
+                    <p>غيّر طريقة تفكيرك وابدأ تطوير حياتك بشكل أعمق.</p>
+
+                    <a href="/ar/courses/mindset/1-what-is-mindset"> ابدأ → </a>
+                </div>
+            </div>
+        </div> -->
+
+        <!-- الأقسام -->
+
+        <h2>استكشف الأقسام</h2>
+
+        <div class="section">
+            <div class="grid">
+                <div class="card">
+                    <h3>احترام الذات</h3>
+
+                    <p>فهم أعمق لقيمتك والتخلص من الأفكار السلبية عن نفسك.</p>
+
+                    <a href="/ar/courses/Self-Worth/what-is-self-worth.html"> استكشف → </a>
+                </div>
+
+                <div class="card">
+                    <h3>الثقة بالنفس</h3>
+
+                    <p>تعلم كيف تبني ثقتك بنفسك وتتخلص من التفكير الزائد.</p>
+
+                    <a href="/ar/courses/confidence/1-what-is-confidence.html"> استكشف → </a>
+                </div>
+
+                <div class="card">
+                    <h3>العقلية</h3>
+
+                    <p>غيّر طريقة تفكيرك وابدأ بالنظر للحياة بشكل مختلف.</p>
+
+                    <a href="/ar/courses/mindset/1-what-is-mindset.html"> استكشف → </a>
+                </div>
+
+                <div class="card">
+                    <h3>التوكيدات</h3>
+
+                    <p>استخدم التوكيدات الإيجابية لتحسين أفكارك ومشاعرك.</p>
+
+                    <a href="/ar/courses/affirmations/what-are-affirmations.html"> استكشف → </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="line"></div>
+
+        <!-- عن الموقع -->
+
+        <h2>عن الموقع</h2>
+
+        <p>
+            يقدم هذا الموقع مقالات ودروس بسيطة وعملية لمساعدتك على تحسين حياتك
+            وبناء عقلية صحية وثقة أكبر بالنفس.
+        </p>
+
+        <div class="line"></div>
+
+        <!-- CTA -->
+
+        <h2>ابدأ رحلتك الآن</h2>
+
+        <p>اختر القسم المناسب وابدأ رحلتك نحو حياة أفضل وتفكير أقوى.</p>
+
+        <div class="line"></div>
+    </div>
+
+    <script define:vars={{ articles }}>
+        const homeSearch = document.getElementById("homeSearch");
+
+        const searchResults = document.getElementById("searchResults");
+
+        homeSearch.addEventListener("input", () => {
+            const value = homeSearch.value.toLowerCase().trim();
+
+            if (value === "") {
+                searchResults.style.display = "none";
+
+                return;
+            }
+
+            const filtered = articles
+                .filter((article) => {
+                    return (
+                        article.title.toLowerCase().includes(value) ||
+                        article.desc.toLowerCase().includes(value)
+                    );
+                })
+                .slice(0, 5);
+
+            if (filtered.length === 0) {
+                searchResults.innerHTML = `
+
+                <div class="search-item">
+
+                    <p>
+                        لا توجد نتائج.
+                    </p>
+
+                </div>
+
+            `;
+
+                searchResults.style.display = "block";
+
+                return;
+            }
+
+            searchResults.innerHTML = filtered
+                .map(
+                    (article) => `
+
+                <a
+                    href="${article.link}"
+                    class="search-item"
+                >
+
+                    <h4>
+                        ${article.title}
+                    </h4>
+
+                    <p>
+                        ${article.desc}
+                    </p>
+
+                </a>
+
+            `,
+                )
+                .join("");
+
+            searchResults.style.display = "block";
+        });
+
+        document.addEventListener("click", (e) => {
+            if (!e.target.closest(".hero-search")) {
+                searchResults.style.display = "none";
+            }
+        });
+    </script>
+</MainLayout>
