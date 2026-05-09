@@ -2,8 +2,10 @@
 import MainLayout from "../../../layouts/MainLayout.astro";
 import { articles } from "../../../data/articles";
 
-const mindsetArticles = articles.filter(article =>
-  article.link.includes("/mindset/")
+const mindsetArticles = articles.filter(
+  (article) =>
+    article.lang === "en" &&
+    article.link.includes("/mindset/")
 );
 ---
 

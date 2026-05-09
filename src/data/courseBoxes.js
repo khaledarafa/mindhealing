@@ -106,7 +106,7 @@ export const courseBoxes = {
                 "Learn how to value yourself and build healthy confidence.",
 
             link:
-                "/articles/self-worth",
+                "/articles/selfworth",
 
             button:
                 "Explore Self Worth →"
@@ -120,7 +120,7 @@ export const courseBoxes = {
                 "تعلّم كيف تبني احترام الذات والثقة الصحية بنفسك.",
 
             link:
-                "/ar/articles/self-worth",
+                "/ar/articles/selfworth",
 
             button:
                 "استكشف تقدير الذات →"

@@ -27,7 +27,7 @@ export const articles = [
     {
         title: "How to Build Self Worth",
         desc: "Learn how to value yourself and build strong self worth step by step.",
-        link: "/articles/self-worth/how-to-build-self-worth",
+        link: "/articles/selfworth/how-to-build-self-worth",
         lang: "en"
     },
     {
@@ -60,17 +60,17 @@ export const articles = [
     }, {
         title: "How to Love Yourself",
         desc: "Simple ways to build self love and create a healthier relationship with yourself.",
-        link: "/articles/self-worth/how-to-love-yourself",
+        link: "/articles/selfworth/how-to-love-yourself",
         lang: "en"
     }, {
         title: "How to Respect Yourself",
         desc: "Learn how to build self respect, confidence, and healthier boundaries.",
-        link: "/articles/self-worth/how-to-respect-yourself",
+        link: "/articles/selfworth/how-to-respect-yourself",
         lang: "en"
     }, {
         title: "How to Stop Seeking Validation",
         desc: "Learn how to stop needing approval from others and build stronger self worth.",
-        link: "/articles/self-worth/how-to-stop-seeking-validation",
+        link: "/articles/selfworth/how-to-stop-seeking-validation",
         lang: "en"
     }, {
         title: "Morning Affirmations for Positive Energy",
@@ -208,7 +208,7 @@ export const articles = [
     {
         title: "كيف تبني احترام الذات",
         desc: "تعلم كيف تفهم قيمتك وتبني احترامًا صحيًا لذاتك خطوة بخطوة.",
-        link: "/ar/articles/self-worth/how-to-build-self-worth",
+        link: "/ar/articles/selfworth/how-to-build-self-worth",
         lang: "ar"
     },
     {
@@ -243,17 +243,17 @@ export const articles = [
     }, {
         title: "كيف تحب نفسك",
         desc: "طرق بسيطة لبناء حب الذات وتحسين علاقتك بنفسك.",
-        link: "/ar/articles/self-worth/how-to-love-yourself",
+        link: "/ar/articles/selfworth/how-to-love-yourself",
         lang: "ar"
     }, {
         title: "كيف تحترم نفسك",
         desc: "تعلم كيف تبني احترام الذات والثقة بالنفس ووضع حدود صحية.",
-        link: "/ar/articles/self-worth/how-to-respect-yourself",
+        link: "/ar/articles/selfworth/how-to-respect-yourself",
         lang: "ar"
     }, {
         title: "كيف تتوقف عن طلب التقدير من الآخرين",
         desc: "تعلم كيف تتخلص من الحاجة الدائمة لموافقة الآخرين وتبني تقديرك لذاتك.",
-        link: "/ar/articles/self-worth/how-to-stop-seeking-validation",
+        link: "/ar/articles/selfworth/how-to-stop-seeking-validation",
         lang: "ar"
     },
     {
