@@ -58,6 +58,11 @@ export const articles = [
         link: "/articles/mindset/how-to-stay-motivated",
         lang: "en"
     }, {
+        title: "How to Stop People Pleasing",
+        desc: "Learn how people pleasing affects your self worth and how to stop seeking approval from everyone around you.",
+        link: "/articles/selfworth/how-to-stop-people-pleasing",
+        lang: "en"
+    }, {
         title: "How to Love Yourself",
         desc: "Simple ways to build self love and create a healthier relationship with yourself.",
         link: "/articles/selfworth/how-to-love-yourself",
@@ -66,6 +71,11 @@ export const articles = [
         title: "How to Respect Yourself",
         desc: "Learn how to build self respect, confidence, and healthier boundaries.",
         link: "/articles/selfworth/how-to-respect-yourself",
+        lang: "en"
+    }, {
+        title: "Why Do I Never Feel Good Enough?",
+        desc: "Learn why you never feel good enough and how low self worth, comparison, and emotional wounds affect your confidence.",
+        link: "/articles/selfworth/why-do-i-never-feel-good-enough",
         lang: "en"
     }, {
         title: "How to Stop Seeking Validation",
@@ -180,7 +190,7 @@ export const articles = [
     },
 
 
-    
+
     {
         title: "كيف تبني الثقة بالنفس",
         desc: "خطوات بسيطة لبناء ثقة حقيقية بنفسك.",
@@ -209,6 +219,11 @@ export const articles = [
         title: "كيف تبني احترام الذات",
         desc: "تعلم كيف تفهم قيمتك وتبني احترامًا صحيًا لذاتك خطوة بخطوة.",
         link: "/ar/articles/selfworth/how-to-build-self-worth",
+        lang: "ar"
+    }, {
+        title: "لماذا أشعر أنني لست جيدًا بما يكفي؟",
+        desc: "تعرّف على أسباب شعورك بأنك لست جيدًا بما يكفي، وكيف يؤثر ضعف تقدير الذات والمقارنة والجروح العاطفية على ثقتك بنفسك.",
+        link: "/ar/articles/selfworth/why-do-i-never-feel-good-enough",
         lang: "ar"
     },
     {
