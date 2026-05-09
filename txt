@@ -1,0 +1,7 @@
+git add .                    
+>> git commit -m "play folder"      
+>> git push             
+
+npm run dev        
+
+node generate-sitemap.cjs     
