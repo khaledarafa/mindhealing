@@ -25,12 +25,6 @@ export const articles = [
         lang: "en"
     },
     {
-        title: "How to Build Self Worth",
-        desc: "Learn how to value yourself and build strong self worth step by step.",
-        link: "/articles/selfworth/how-to-build-self-worth",
-        lang: "en"
-    },
-    {
         title: "How to Stop Caring What People Think",
         desc: "Learn how to stop fearing judgment and build real confidence.",
         link: "/articles/confidence/stop-caring-what-people-think",
@@ -56,42 +50,6 @@ export const articles = [
         title: "How to Stay Motivated",
         desc: "Simple ways to stay motivated and keep moving forward even on difficult days.",
         link: "/articles/mindset/how-to-stay-motivated",
-        lang: "en"
-    }, {
-        title: "How to Stop People Pleasing",
-        desc: "Learn how people pleasing affects your self worth and how to stop seeking approval from everyone around you.",
-        link: "/articles/selfworth/how-to-stop-people-pleasing",
-        lang: "en"
-    }, {
-        title: "How to Love Yourself",
-        desc: "Simple ways to build self love and create a healthier relationship with yourself.",
-        link: "/articles/selfworth/how-to-love-yourself",
-        lang: "en"
-    }, {
-        title: "How to Respect Yourself",
-        desc: "Learn how to build self respect, confidence, and healthier boundaries.",
-        link: "/articles/selfworth/how-to-respect-yourself",
-        lang: "en"
-    }, {
-        title: "How to Stop Feeling Inferior to Others",
-        desc: "Learn why you feel inferior to others and how to rebuild confidence, self worth, and inner security.",
-        link: "/articles/selfworth/how-to-stop-feeling-inferior-to-others",
-        lang: "en"
-    }, {
-        title: "Signs of Low Self Worth",
-        desc: "Learn the common signs of low self worth and how negative self beliefs can affect your confidence and daily life.",
-        link: "/articles/selfworth/signs-of-low-self-worth",
-        lang: "en"
-    },
-    {
-        title: "Why Do I Never Feel Good Enough?",
-        desc: "Learn why you never feel good enough and how low self worth, comparison, and emotional wounds affect your confidence.",
-        link: "/articles/selfworth/why-do-i-never-feel-good-enough",
-        lang: "en"
-    }, {
-        title: "How to Stop Seeking Validation",
-        desc: "Learn how to stop needing approval from others and build stronger self worth.",
-        link: "/articles/selfworth/how-to-stop-seeking-validation",
         lang: "en"
     }, {
         title: "Morning Affirmations for Positive Energy",
@@ -198,6 +156,50 @@ export const articles = [
         desc: "Positive affirmations to reduce social anxiety and build calm, natural confidence around people.",
         link: "/articles/affirmations/affirmations-for-social-anxiety-and-confidence",
         lang: "en"
+    },
+
+
+
+    {
+        title: "How to Build Self Worth",
+        desc: "Learn how to value yourself and build strong self worth step by step.",
+        link: "/articles/selfworth/how-to-build-self-worth",
+        lang: "en"
+    }, {
+        title: "How to Stop People Pleasing",
+        desc: "Learn how people pleasing affects your self worth and how to stop seeking approval from everyone around you.",
+        link: "/articles/selfworth/how-to-stop-people-pleasing",
+        lang: "en"
+    }, {
+        title: "How to Love Yourself",
+        desc: "Simple ways to build self love and create a healthier relationship with yourself.",
+        link: "/articles/selfworth/how-to-love-yourself",
+        lang: "en"
+    }, {
+        title: "How to Respect Yourself",
+        desc: "Learn how to build self respect, confidence, and healthier boundaries.",
+        link: "/articles/selfworth/how-to-respect-yourself",
+        lang: "en"
+    }, {
+        title: "How to Stop Feeling Inferior to Others",
+        desc: "Learn why you feel inferior to others and how to rebuild confidence, self worth, and inner security.",
+        link: "/articles/selfworth/how-to-stop-feeling-inferior-to-others",
+        lang: "en"
+    }, {
+        title: "Signs of Low Self Worth",
+        desc: "Learn the common signs of low self worth and how negative self beliefs can affect your confidence and daily life.",
+        link: "/articles/selfworth/signs-of-low-self-worth",
+        lang: "en"
+    }, {
+        title: "Why Do I Never Feel Good Enough?",
+        desc: "Learn why you never feel good enough and how low self worth, comparison, and emotional wounds affect your confidence.",
+        link: "/articles/selfworth/why-do-i-never-feel-good-enough",
+        lang: "en"
+    }, {
+        title: "How to Stop Seeking Validation",
+        desc: "Learn how to stop needing approval from others and build stronger self worth.",
+        link: "/articles/selfworth/how-to-stop-seeking-validation",
+        lang: "en"
     }, {
         title: "Why Do I Hate Myself?",
         desc: "Learn why self hate happens and how negative thoughts, comparison, and emotional pain affect your self worth.",
@@ -218,17 +220,65 @@ export const articles = [
         desc: "Learn why you constantly seek validation and how approval seeking affects confidence, self worth, and emotional peace.",
         link: "/articles/selfworth/why-do-i-seek-validation",
         lang: "en"
-    },{
-    title: "Why Am I So Afraid of Rejection?",
-    desc: "Learn why fear of rejection happens and how insecurity, low self worth, and emotional wounds affect your confidence and relationships.",
-    link: "/articles/selfworth/why-am-i-so-afraid-of-rejection",
-    lang: "en"
-},{
-    title: "orth",
-    desc: "Learn how childhood experiences shape self worth, confidence, emotional safety, and the way you see yourself as an adult.",
-    link: "/articles/selfworth/how-childhood-affects-self-worth",
-    lang: "en"
-},
+    }, {
+        title: "Why Am I So Afraid of Rejection?",
+        desc: "Learn why fear of rejection happens and how insecurity, low self worth, and emotional wounds affect your confidence and relationships.",
+        link: "/articles/selfworth/why-am-i-so-afraid-of-rejection",
+        lang: "en"
+    }, {
+        title: "How Childhood Affects Self Worth",
+        desc: "Learn how childhood experiences shape self worth, confidence, emotional safety, and the way you see yourself as an adult.",
+        link: "/articles/selfworth/how-childhood-affects-self-worth",
+        lang: "en"
+    }, {
+        title: "How to Heal Low Self Esteem",
+        desc: "Learn how to heal low self esteem by understanding childhood wounds, rebuilding self worth, and changing negative emotional patterns.",
+        link: "/articles/selfworth/how-to-heal-low-self-esteem",
+        lang: "en"
+    }, {
+        title: "Why Do I Feel Worthless?",
+        desc: "Learn why you feel worthless and how childhood wounds, rejection, shame, and low self worth can affect the way you see yourself.",
+        link: "/articles/selfworth/why-do-i-feel-worthless",
+        lang: "en"
+    }, {
+        title: "Why Can’t I Respect Myself?",
+        desc: "Learn why you struggle to respect yourself and how shame, people pleasing, emotional wounds, and weak boundaries affect self respect.",
+        link: "/articles/selfworth/why-cant-i-respect-myself",
+        lang: "en"
+    }, {
+        title: "How To Feel Emotionally Safe Again",
+        desc: "Learn how to feel emotionally safe again by rebuilding self trust, calming your nervous system, and healing emotional wounds.",
+        link: "/articles/selfworth/how-to-feel-emotionally-safe-again",
+        lang: "en"
+    },
+
+
+    {
+        title: "Why Do You Always Feel Like No One Is Right For You?",
+        desc: "Sometimes the problem is not that you haven’t found the right person yet… sometimes you are looking for someone to heal an emptiness or wound inside you.",
+        link: "/articles/relationships/why-you-never-feel-anyone-is-right",
+        lang: "en"
+    }, {
+        title: "why-you-feel-unhappy-in-relationships?",
+        desc: "Sometimes the problem is not that people are bad… sometimes we expect relationships to save us from loneliness, fear, and emotional emptiness.",
+        link: "/articles/relationships/why-you-feel-unhappy-in-relationships",
+        lang: "en"
+    }, {
+        title: "Do You Love The Person… Or The Feeling They Give You?",
+        desc: "Sometimes we are not truly in love with the person… we become attached to the feeling they gave us in the beginning and mistake it for love.",
+        link: "/articles/relationships/do-you-love-the-person-or-the-feeling",
+        lang: "en"
+    }, {
+        title: "Are You In Love… Or Trying To Heal Your Childhood?",
+        desc: "Sometimes we are not truly in love with the person… we become attached to old emotional needs that were never healed.",
+        link: "/articles/relationships/trying-to-heal-your-childhood-through-love",
+        lang: "en"
+    }, {
+        title: "Why Do Some People Fear Being Left Even In Toxic Relationships?",
+        desc: "Sometimes people stay attached to painful relationships… not because they are happy, but because they are terrified of abandonment and loss.",
+        link: "/articles/relationships/why-some-people-fear-being-left-even-in-toxic-relationships",
+        lang: "en"
+    },
 
 
 
@@ -259,22 +309,6 @@ export const articles = [
         lang: "ar"
     },
     {
-        title: "كيف تبني احترام الذات",
-        desc: "تعلم كيف تفهم قيمتك وتبني احترامًا صحيًا لذاتك خطوة بخطوة.",
-        link: "/ar/articles/selfworth/how-to-build-self-worth",
-        lang: "ar"
-    }, {
-        title: "علامات ضعف تقدير الذات",
-        desc: "تعرّف على أهم علامات ضعف تقدير الذات وكيف تؤثر الأفكار السلبية والخوف من الرفض على ثقتك بنفسك.",
-        link: "/ar/articles/selfworth/signs-of-low-self-worth",
-        lang: "ar"
-    }, {
-        title: "لماذا أشعر أنني لست جيدًا بما يكفي؟",
-        desc: "تعرّف على أسباب شعورك بأنك لست جيدًا بما يكفي، وكيف يؤثر ضعف تقدير الذات والمقارنة والجروح العاطفية على ثقتك بنفسك.",
-        link: "/ar/articles/selfworth/why-do-i-never-feel-good-enough",
-        lang: "ar"
-    },
-    {
         title: "كيف تتوقف عن الاهتمام بآراء الناس",
         desc: "تعلم كيف تتخلص من الخوف من حكم الآخرين وتبني ثقة حقيقية بنفسك.",
         link: "/ar/articles/confidence/stop-caring-what-people-think",
@@ -302,26 +336,6 @@ export const articles = [
         title: "كيف تحافظ على الحماس",
         desc: "طرق بسيطة للحفاظ على الحماس والاستمرار حتى في الأيام الصعبة.",
         link: "/ar/articles/mindset/how-to-stay-motivated",
-        lang: "ar"
-    }, {
-        title: "كيف تحب نفسك",
-        desc: "طرق بسيطة لبناء حب الذات وتحسين علاقتك بنفسك.",
-        link: "/ar/articles/selfworth/how-to-love-yourself",
-        lang: "ar"
-    }, {
-        title: "كيف تتوقف عن الشعور بالنقص مقارنة بالآخرين",
-        desc: "تعلّم كيف تتوقف عن الشعور بالنقص مقارنة بالآخرين وتبني ثقة وتقدير ذات صحيين.",
-        link: "/ar/articles/selfworth/how-to-stop-feeling-inferior-to-others",
-        lang: "ar"
-    }, {
-        title: "كيف تحترم نفسك",
-        desc: "تعلم كيف تبني احترام الذات والثقة بالنفس ووضع حدود صحية.",
-        link: "/ar/articles/selfworth/how-to-respect-yourself",
-        lang: "ar"
-    }, {
-        title: "كيف تتوقف عن طلب التقدير من الآخرين",
-        desc: "تعلم كيف تتخلص من الحاجة الدائمة لموافقة الآخرين وتبني تقديرك لذاتك.",
-        link: "/ar/articles/selfworth/how-to-stop-seeking-validation",
         lang: "ar"
     },
     {
@@ -448,13 +462,51 @@ export const articles = [
         link: "/ar/articles/affirmations/affirmations-for-social-anxiety-and-confidence",
         lang: "ar"
     },
+
+
+
+
     {
+        title: "كيف تبني احترام الذات",
+        desc: "تعلم كيف تفهم قيمتك وتبني احترامًا صحيًا لذاتك خطوة بخطوة.",
+        link: "/ar/articles/selfworth/how-to-build-self-worth",
+        lang: "ar"
+    }, {
+        title: "علامات ضعف تقدير الذات",
+        desc: "تعرّف على أهم علامات ضعف تقدير الذات وكيف تؤثر الأفكار السلبية والخوف من الرفض على ثقتك بنفسك.",
+        link: "/ar/articles/selfworth/signs-of-low-self-worth",
+        lang: "ar"
+    }, {
+        title: "لماذا أشعر أنني لست جيدًا بما يكفي؟",
+        desc: "تعرّف على أسباب شعورك بأنك لست جيدًا بما يكفي، وكيف يؤثر ضعف تقدير الذات والمقارنة والجروح العاطفية على ثقتك بنفسك.",
+        link: "/ar/articles/selfworth/why-do-i-never-feel-good-enough",
+        lang: "ar"
+    }, {
+        title: "كيف تحب نفسك",
+        desc: "طرق بسيطة لبناء حب الذات وتحسين علاقتك بنفسك.",
+        link: "/ar/articles/selfworth/how-to-love-yourself",
+        lang: "ar"
+    }, {
+        title: "كيف تتوقف عن الشعور بالنقص مقارنة بالآخرين",
+        desc: "تعلّم كيف تتوقف عن الشعور بالنقص مقارنة بالآخرين وتبني ثقة وتقدير ذات صحيين.",
+        link: "/ar/articles/selfworth/how-to-stop-feeling-inferior-to-others",
+        lang: "ar"
+    }, {
+        title: "كيف تحترم نفسك",
+        desc: "تعلم كيف تبني احترام الذات والثقة بالنفس ووضع حدود صحية.",
+        link: "/ar/articles/selfworth/how-to-respect-yourself",
+        lang: "ar"
+    }, {
+        title: "كيف تتوقف عن طلب التقدير من الآخرين",
+        desc: "تعلم كيف تتخلص من الحاجة الدائمة لموافقة الآخرين وتبني تقديرك لذاتك.",
+        link: "/ar/articles/selfworth/how-to-stop-seeking-validation",
+        lang: "ar"
+    }, {
         title: "لماذا أكره نفسي؟",
         desc: "تعلّم لماذا يحدث كره الذات وكيف تؤثر الأفكار السلبية والمقارنة والألم النفسي على تقديرك لذاتك.",
         link: "/ar/articles/selfworth/why-do-i-hate-myself",
         lang: "ar"
-    },
-    {
+    }, {
         title: "لماذا أشعر بعدم الأمان دائمًا؟",
         desc: "تعلّم لماذا تشعر بعدم الأمان وكيف تؤثر المقارنة والخوف والتفكير الزائد على ثقتك بنفسك.",
         link: "/ar/articles/selfworth/why-am-i-so-insecure",
@@ -469,15 +521,66 @@ export const articles = [
         desc: "تعرّف على أسباب حاجتك المستمرة للتقدير والموافقة من الآخرين، وكيف يؤثر ذلك على ثقتك بنفسك وتقديرك لذاتك وسلامك النفسي.",
         link: "/ar/articles/selfworth/why-do-i-seek-validation",
         lang: "ar"
-    },{
-    title: "لماذا أخاف من الرفض بهذه الطريقة؟",
-    desc: "تعرّف على أسباب الخوف من الرفض وكيف يؤثر ضعف تقدير الذات والخوف وعدم الأمان على ثقتك بنفسك وعلاقاتك.",
-    link: "/ar/articles/selfworth/why-am-i-so-afraid-of-rejection",
-    lang: "ar"
-},{
-    title: "كيف تؤثر الطفولة على تقديرك لذاتك؟",
-    desc: "تعرّف على كيف تؤثر تجارب الطفولة على تقدير الذات والثقة بالنفس والأمان العاطفي والطريقة التي ترى بها نفسك اليوم.",
-    link: "/ar/articles/selfworth/how-childhood-affects-self-worth",
-    lang: "ar"
-},
+    }, {
+        title: "لماذا أخاف من الرفض بهذه الطريقة؟",
+        desc: "تعرّف على أسباب الخوف من الرفض وكيف يؤثر ضعف تقدير الذات والخوف وعدم الأمان على ثقتك بنفسك وعلاقاتك.",
+        link: "/ar/articles/selfworth/why-am-i-so-afraid-of-rejection",
+        lang: "ar"
+    }, {
+        title: "كيف تؤثر الطفولة على تقديرك لذاتك؟",
+        desc: "تعرّف على كيف تؤثر تجارب الطفولة على تقدير الذات والثقة بالنفس والأمان العاطفي والطريقة التي ترى بها نفسك اليوم.",
+        link: "/ar/articles/selfworth/how-childhood-affects-self-worth",
+        lang: "ar"
+    }, {
+        title: "كيف تشفي ضعف تقدير الذات؟",
+        desc: "تعرّف على كيف يبدأ شفاء ضعف تقدير الذات من فهم الجروح القديمة وإعادة بناء شعورك بالقيمة والأمان الداخلي.",
+        link: "/ar/articles/selfworth/how-to-heal-low-self-esteem",
+        lang: "ar"
+    }, {
+        title: "لماذا أشعر أنني بلا قيمة؟",
+        desc: "تعرّف على الأسباب النفسية التي تجعلك تشعر أنك بلا قيمة، وكيف تؤثر الجروح العاطفية والرفض وضعف تقدير الذات على نظرتك لنفسك.",
+        link: "/ar/articles/selfworth/why-do-i-feel-worthless",
+        lang: "ar"
+    }, {
+        title: "كيف تتوقف عن إرضاء الناس؟",
+        desc: "تعرّف على كيف يؤثر إرضاء الناس المستمر على تقديرك لذاتك وكيف تبدأ بالتوقف عن البحث الدائم عن قبول الجميع.",
+        link: "/ar/articles/selfworth/how-to-stop-people-pleasing",
+        lang: "ar"
+    }, {
+        title: " لماذا أقبل المعاملة السيئة؟",
+        desc: "تعرّف على الأسباب النفسية التي تجعلك تفقد احترامك لنفسك، وكيف يؤثر العار وإرضاء الناس وضعف الحدود على تقديرك لذاتك.",
+        link: "/ar/articles/selfworth/why-cant-i-respect-myself",
+        lang: "ar"
+    },
+
+
+
+
+    {
+        title: "ليه كل مرة تحس إن الشخص ده مش مناسبك؟",
+        desc: "أحيانًا المشكلة مش إنك لسه ما لقيتش الشخص المناسب… أحيانًا المشكلة إنك بتدور على حد يعالج فراغ أو جرح جواك.",
+        link: "/ar/articles/relationships/why-you-never-feel-anyone-is-right",
+        lang: "ar"
+    }, {
+        title: "ليه مش مرتاح في العلاقات؟",
+        desc: "أحيانًا المشكلة مش إن الناس وحشة… أحيانًا المشكلة إنك تنتظر من العلاقة إنها تنقذك من الوحدة والخوف والفراغ الداخلي.",
+        link: "/ar/articles/relationships/why-you-feel-unhappy-in-relationships",
+        lang: "ar"
+    }, {
+        title: "هل أنت بتحب الشخص… ولا الشعور اللي بيديهولك؟",
+        desc: "أحيانًا إحنا ما بنحبش الشخص نفسه… إحنا بنتعلق بالشعور اللي حسسنا بيه في البداية، وبنفتكر إن ده حب.",
+        link: "/ar/articles/relationships/do-you-love-the-person-or-the-feeling",
+        lang: "ar"
+    }, {
+        title: "هل أنت بتحب فعلًا… ولا بتحاول تعالج طفولتك؟",
+        desc: "أحيانًا إحنا ما بنحبش الشخص نفسه… إحنا بنتعلق باحتياجات وجروح قديمة عمرها ما اتعالجت.",
+        link: "/ar/articles/relationships/trying-to-heal-your-childhood-through-love",
+        lang: "ar"
+    }, {
+        title: "ليه بعض الناس بتخاف تتساب حتى لو العلاقة مؤذية؟",
+        desc: "أوقات الإنسان يتمسك بعلاقة بتوجعه… مش لأنه سعيد، لكن لأنه مرعوب من إحساس الفقد والهجر.",
+        link: "/ar/articles/relationships/why-some-people-fear-being-left-even-in-toxic-relationships",
+        lang: "ar"
+    },
+
 ];

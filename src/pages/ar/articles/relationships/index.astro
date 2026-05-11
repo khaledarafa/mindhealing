@@ -1,0 +1,150 @@
+---
+import MainLayout from "../../../../layouts/MainLayout.astro";
+import { articles } from "../../../../data/articles";
+
+const relationshipArticles = articles.filter(article =>
+  article.lang === "ar" &&
+  article.link.includes("/relationships/")
+);
+---
+
+<MainLayout
+  title="العلاقات والوعي العاطفي | Mind Healing"
+  description="اكتشف مقالات عن العلاقات، التعلق العاطفي، الوحدة، الاحتياج، تقدير الذات، والوعي العاطفي بطريقة صادمة وعميقة."
+>
+
+<div class="container">
+
+  <div class="category-hero">
+
+    <h1>
+      💔 العلاقات والوعي العاطفي
+    </h1>
+
+    <p class="page-desc">
+      اكتشف مقالات عن العلاقات،
+      التعلق العاطفي،
+      الوحدة،
+      الاحتياج،
+      الخوف من الفقد،
+      والوعي العاطفي بشكل عميق وصادم.
+    </p>
+
+  </div>
+
+  <div class="search-box">
+
+    <input
+      type="text"
+      id="searchInput"
+      placeholder="ابحث داخل مقالات العلاقات..."
+    />
+
+    <button id="clearSearch">
+      ✕
+    </button>
+
+  </div>
+
+  <div class="section">
+
+    <div class="grid" id="articles">
+
+      {
+        relationshipArticles.map(article => (
+
+          <div class="card">
+
+            <h3>{article.title}</h3>
+
+            <p>{article.desc}</p>
+
+            <a href={article.link}>
+              اقرأ المقال →
+            </a>
+
+          </div>
+
+        ))
+      }
+
+    </div>
+
+  </div>
+
+</div>
+
+<script define:vars={{ relationshipArticles }}>
+
+const container =
+  document.getElementById("articles");
+
+const searchInput =
+  document.getElementById("searchInput");
+
+const clearBtn =
+  document.getElementById("clearSearch");
+
+function renderArticles(
+  filtered = relationshipArticles
+) {
+
+  container.innerHTML =
+    filtered.map(article => `
+
+      <div class="card">
+
+        <h3>${article.title}</h3>
+
+        <p>${article.desc}</p>
+
+        <a href="${article.link}">
+          اقرأ المقال →
+        </a>
+
+      </div>
+
+    `).join("");
+
+}
+
+searchInput.addEventListener("input", () => {
+
+  const value =
+    searchInput.value.toLowerCase();
+
+  clearBtn.style.display =
+    value ? "block" : "none";
+
+  const filtered =
+    relationshipArticles.filter(article => {
+
+      return (
+
+        article.title.toLowerCase().includes(value)
+
+        ||
+
+        article.desc.toLowerCase().includes(value)
+
+      );
+
+    });
+
+  renderArticles(filtered);
+
+});
+
+clearBtn.addEventListener("click", () => {
+
+  searchInput.value = "";
+
+  clearBtn.style.display = "none";
+
+  renderArticles();
+
+});
+
+</script>
+
+</MainLayout>
