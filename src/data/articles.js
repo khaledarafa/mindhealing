@@ -213,7 +213,22 @@ export const articles = [
         desc: "Learn how to stop self doubt and rebuild confidence, self trust, and emotional strength.",
         link: "/articles/selfworth/how-to-stop-self-doubt",
         lang: "en"
-    },
+    }, {
+        title: "Why Do I Seek Validation?",
+        desc: "Learn why you constantly seek validation and how approval seeking affects confidence, self worth, and emotional peace.",
+        link: "/articles/selfworth/why-do-i-seek-validation",
+        lang: "en"
+    },{
+    title: "Why Am I So Afraid of Rejection?",
+    desc: "Learn why fear of rejection happens and how insecurity, low self worth, and emotional wounds affect your confidence and relationships.",
+    link: "/articles/selfworth/why-am-i-so-afraid-of-rejection",
+    lang: "en"
+},{
+    title: "orth",
+    desc: "Learn how childhood experiences shape self worth, confidence, emotional safety, and the way you see yourself as an adult.",
+    link: "/articles/selfworth/how-childhood-affects-self-worth",
+    lang: "en"
+},
 
 
 
@@ -449,5 +464,20 @@ export const articles = [
         desc: "تعلّم كيف تتوقف عن الشك في نفسك وتبني ثقة وتقديرًا صحيًا لذاتك من جديد.",
         link: "/ar/articles/selfworth/how-to-stop-self-doubt",
         lang: "ar"
-    },
+    }, {
+        title: "لماذا أبحث دائمًا عن التقدير من الآخرين؟",
+        desc: "تعرّف على أسباب حاجتك المستمرة للتقدير والموافقة من الآخرين، وكيف يؤثر ذلك على ثقتك بنفسك وتقديرك لذاتك وسلامك النفسي.",
+        link: "/ar/articles/selfworth/why-do-i-seek-validation",
+        lang: "ar"
+    },{
+    title: "لماذا أخاف من الرفض بهذه الطريقة؟",
+    desc: "تعرّف على أسباب الخوف من الرفض وكيف يؤثر ضعف تقدير الذات والخوف وعدم الأمان على ثقتك بنفسك وعلاقاتك.",
+    link: "/ar/articles/selfworth/why-am-i-so-afraid-of-rejection",
+    lang: "ar"
+},{
+    title: "كيف تؤثر الطفولة على تقديرك لذاتك؟",
+    desc: "تعرّف على كيف تؤثر تجارب الطفولة على تقدير الذات والثقة بالنفس والأمان العاطفي والطريقة التي ترى بها نفسك اليوم.",
+    link: "/ar/articles/selfworth/how-childhood-affects-self-worth",
+    lang: "ar"
+},
 ];
