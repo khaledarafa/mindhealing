@@ -4,4 +4,4 @@ git add .
 
 npm run dev        
 
-node generate-sitemap.cjs     
+node generate-sitemap.cjs

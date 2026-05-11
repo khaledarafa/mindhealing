@@ -73,6 +73,17 @@ export const articles = [
         link: "/articles/selfworth/how-to-respect-yourself",
         lang: "en"
     }, {
+        title: "How to Stop Feeling Inferior to Others",
+        desc: "Learn why you feel inferior to others and how to rebuild confidence, self worth, and inner security.",
+        link: "/articles/selfworth/how-to-stop-feeling-inferior-to-others",
+        lang: "en"
+    }, {
+        title: "Signs of Low Self Worth",
+        desc: "Learn the common signs of low self worth and how negative self beliefs can affect your confidence and daily life.",
+        link: "/articles/selfworth/signs-of-low-self-worth",
+        lang: "en"
+    },
+    {
         title: "Why Do I Never Feel Good Enough?",
         desc: "Learn why you never feel good enough and how low self worth, comparison, and emotional wounds affect your confidence.",
         link: "/articles/selfworth/why-do-i-never-feel-good-enough",
@@ -187,7 +198,24 @@ export const articles = [
         desc: "Positive affirmations to reduce social anxiety and build calm, natural confidence around people.",
         link: "/articles/affirmations/affirmations-for-social-anxiety-and-confidence",
         lang: "en"
+    }, {
+        title: "Why Do I Hate Myself?",
+        desc: "Learn why self hate happens and how negative thoughts, comparison, and emotional pain affect your self worth.",
+        link: "/articles/selfworth/why-do-i-hate-myself",
+        lang: "en"
+    }, {
+        title: "Why Am I So Insecure?",
+        desc: "Learn why insecurity happens and how fear, comparison, overthinking, and low self worth affect your confidence.",
+        link: "/articles/selfworth/why-am-i-so-insecure",
+        lang: "en"
+    }, {
+        title: "How to Stop Self Doubt",
+        desc: "Learn how to stop self doubt and rebuild confidence, self trust, and emotional strength.",
+        link: "/articles/selfworth/how-to-stop-self-doubt",
+        lang: "en"
     },
+
+
 
 
 
@@ -219,6 +247,11 @@ export const articles = [
         title: "كيف تبني احترام الذات",
         desc: "تعلم كيف تفهم قيمتك وتبني احترامًا صحيًا لذاتك خطوة بخطوة.",
         link: "/ar/articles/selfworth/how-to-build-self-worth",
+        lang: "ar"
+    }, {
+        title: "علامات ضعف تقدير الذات",
+        desc: "تعرّف على أهم علامات ضعف تقدير الذات وكيف تؤثر الأفكار السلبية والخوف من الرفض على ثقتك بنفسك.",
+        link: "/ar/articles/selfworth/signs-of-low-self-worth",
         lang: "ar"
     }, {
         title: "لماذا أشعر أنني لست جيدًا بما يكفي؟",
@@ -259,6 +292,11 @@ export const articles = [
         title: "كيف تحب نفسك",
         desc: "طرق بسيطة لبناء حب الذات وتحسين علاقتك بنفسك.",
         link: "/ar/articles/selfworth/how-to-love-yourself",
+        lang: "ar"
+    }, {
+        title: "كيف تتوقف عن الشعور بالنقص مقارنة بالآخرين",
+        desc: "تعلّم كيف تتوقف عن الشعور بالنقص مقارنة بالآخرين وتبني ثقة وتقدير ذات صحيين.",
+        link: "/ar/articles/selfworth/how-to-stop-feeling-inferior-to-others",
         lang: "ar"
     }, {
         title: "كيف تحترم نفسك",
@@ -393,6 +431,23 @@ export const articles = [
         title: "توكيدات للقلق الاجتماعي والثقة بالنفس",
         desc: "توكيدات إيجابية لتقليل القلق الاجتماعي وبناء ثقة هادئة وطبيعية مع الآخرين.",
         link: "/ar/articles/affirmations/affirmations-for-social-anxiety-and-confidence",
+        lang: "ar"
+    },
+    {
+        title: "لماذا أكره نفسي؟",
+        desc: "تعلّم لماذا يحدث كره الذات وكيف تؤثر الأفكار السلبية والمقارنة والألم النفسي على تقديرك لذاتك.",
+        link: "/ar/articles/selfworth/why-do-i-hate-myself",
+        lang: "ar"
+    },
+    {
+        title: "لماذا أشعر بعدم الأمان دائمًا؟",
+        desc: "تعلّم لماذا تشعر بعدم الأمان وكيف تؤثر المقارنة والخوف والتفكير الزائد على ثقتك بنفسك.",
+        link: "/ar/articles/selfworth/why-am-i-so-insecure",
+        lang: "ar"
+    }, {
+        title: "كيف تتوقف عن الشك في نفسك",
+        desc: "تعلّم كيف تتوقف عن الشك في نفسك وتبني ثقة وتقديرًا صحيًا لذاتك من جديد.",
+        link: "/ar/articles/selfworth/how-to-stop-self-doubt",
         lang: "ar"
     },
 ];
