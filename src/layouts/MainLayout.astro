@@ -8,16 +8,14 @@ import Form from "../components/form.astro";
 import { SITE_TITLE, SITE_DESCRIPTION, SITE_IMAGE } from "../consts/seo";
 const pathname = Astro.url.pathname;
 
-const isArabic =
-    pathname === "/ar"
-    || pathname.startsWith("/ar/");
+const isArabic = pathname === "/ar" || pathname.startsWith("/ar/");
 
 const frontmatter = Astro.props.frontmatter || {};
 
 const {
-  title = frontmatter.title || SITE_TITLE,
-  description = frontmatter.description || SITE_DESCRIPTION,
-  image = frontmatter.image || SITE_IMAGE,
+    title = frontmatter.title || SITE_TITLE,
+    description = frontmatter.description || SITE_DESCRIPTION,
+    image = frontmatter.image || SITE_IMAGE,
 } = Astro.props;
 ---
 
@@ -27,10 +25,10 @@ const {
         <meta charset="UTF-8" />
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-<link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600;700&family=Cairo:wght@300;400;500;600;700&family=Changa:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600;700&family=Cairo:wght@300;400;500;600;700&family=Changa:wght@400;500;600;700&display=swap" rel="stylesheet" />
         <title>{title}</title>
         <meta name="description" content={description} />
 
@@ -40,24 +38,25 @@ const {
 
         <meta property="og:image" content={image} />
 
+        <meta name="twitter:image" content={image} />
+
+        <link rel="apple-touch-icon" href="/favicon.png" />
+
+        <link rel="icon" type="image/png" href="/favicon.png?v=2" />
+
         <meta property="og:type" content="website" />
 
-        <link
-            rel="canonical"
-            href={`https://mindhealing.fyi${Astro.url.pathname}`}
-        />
+        <link rel="canonical" href={`https://mindhealing.fyi${Astro.url.pathname}`} />
 
-        <link rel="icon" href="/favicon.png" />
-        
         <Analytics />
     </head>
 
     <body>
         <Navbar isArabic={isArabic} />
 
-<div class="container">
-    <slot />
-</div>
+        <div class="container">
+            <slot />
+        </div>
         <div class="container">
             <Form isArabic={isArabic} />
         </div>
